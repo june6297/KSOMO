@@ -2,6 +2,7 @@ package com.gimhae.framework.mvc;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
+import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -21,6 +22,16 @@ public class DispatcherServlet extends HttpServlet{
 //	handler.put("/index.do","com.gimhae.framework.controller.IndexController");
 //	handler.put("/intro.do","com.gimhae.framework.controller.IntroController");
 //	handler.put("/emp.do","com.gimhae.framework.controller.ListController");
+	@Override
+	public void init() throws ServletException {
+		// handlerMapping
+		Enumeration<String> enu = this.getInitParameterNames();
+		while(enu.hasMoreElements()) {
+			String key = enu.nextElement();
+			String val = this.getInitParameter(key);
+			handler.put(key,val);
+		}
+	}
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -50,6 +61,7 @@ public class DispatcherServlet extends HttpServlet{
 			clz = Class.forName(info);
 			controller = (MyController) clz.getDeclaredConstructor().newInstance();
 			
+			// viewResolver
 			String viewName = controller.execute(req, resp);
 			RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/views/"+viewName+".jsp");
 			rd.forward(req, resp);
