@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h2>ex04 Page</h2>
+	<h1>ex04 page</h1>
 	<form action="ex15.do" method="post">
 		<div>
 			<input type="text" name="empno" placeholder="empno"/>
@@ -19,10 +19,8 @@
 			<input type="text" name="pay" placeholder="pay"/>
 		</div>
 		<div>
-			<input type="date" name="hiredate" />
+			<input type="submit" value="전송" />
 		</div>
-		
-		
 	</form>
 </body>
 </html>

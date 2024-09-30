@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>bean pring</h1>
+	<h1>bean print</h1>
 	<div>empno:${bean.empno }</div>
 	<div>ename:${bean.ename }</div>
 	<div>pay:${bean.pay }</div>

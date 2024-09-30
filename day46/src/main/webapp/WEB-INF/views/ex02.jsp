@@ -7,6 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h2>ex02 Page</h2>
+	<h1>ex02 page</h1>
+	<form action="ex13.do" method="post">
+		id<input type="text" name="id"/>
+		pw<input type="text" name="pw"/>
+		<button>전송</button>
+	</form>
 </body>
 </html>

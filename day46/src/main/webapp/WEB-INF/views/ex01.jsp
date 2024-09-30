@@ -7,7 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>ex02 controller</h1>
+	<h1>ex01 controller</h1>
 	<p>${msg }</p>
+	<p>${msg2 }</p>
 </body>
 </html>

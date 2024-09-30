@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h2>ex03 Page</h2>
+	<h1>ex03 page</h1>
+	<p>id:${id }</p>
+	<p>pw:${pw }</p>
 </body>
 </html>
