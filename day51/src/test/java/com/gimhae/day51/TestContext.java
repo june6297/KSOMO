@@ -34,8 +34,7 @@ public class TestContext {
 //		System.out.println(sqlSession.getMapper(DeptDao.class).pullList());
 		try(SqlSession session=sqlSessionFactory.openSession()) {
 			for(DeptVo bean:session.getMapper(DeptDao.class).pullList()) {
-//				log.info(bean.toString());
-				final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(TestContext.class);
+				log.info(bean.toString());
 			}
 		}
 	}
